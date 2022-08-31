@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="contacts-container">
+    <div>
+      Workers
+    </div>
+    <app-button
+      label="Add New Worker"
+      (onClick)="openNewWorkerForm()"
+    ></app-button>
+  </div>
+  <div>
+    <app-box>
+      <mat-table [dataSource]="dataSource">
+<!--        matSort (matSortChange)="announceSortChange($event)"-->
+        <!-- User name Definition -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef >Name</mat-header-cell>
+<!--          mat-sort-header sortActionDescription="Sort by name"-->
+          <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Age Definition -->
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+        </ng-container>
+
+        <!-- Title Definition -->
+        <ng-container matColumnDef="type">
+          <mat-header-cell *matHeaderCellDef>Type</mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.type}} </mat-cell>
+        </ng-container>
+
+        <!-- Header and Row Declarations -->
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+<!--      <mat-paginator [pageSizeOptions]="[50, 100, 200, 500]"-->
+<!--                     showFirstLastButtons-->
+<!--                     aria-label="Select page of periodic elements">-->
+<!--      </mat-paginator>-->
+    </app-box>
+  </div>
+</div>
+<app-dialog-side
+  *ngIf="openNewWorkerDialog"
+  [dialogTitle]="'auth.login.rememberMe'"
+  (clickClose)="closeNewWorkerForm()"
+>
+  <div class="newContact-form-container">
+    <app-input
+      label="Name"
+      [(ngModel)]="name"
+    ></app-input>
+    <app-input
+      label="Lastname"
+      [(ngModel)]="lastname"
+    ></app-input>
+    <app-input
+      label="Email"
+      [(ngModel)]="email"
+    ></app-input>
+    <app-input
+      label="Telefono"
+      [(ngModel)]="telefono"
+    ></app-input>
+    <app-input
+      label="Movil"
+      [(ngModel)]="movil"
+    ></app-input>
+    <app-input
+      label="Tipo de contacto"
+      [(ngModel)]="type"
+    ></app-input>
+    <div>
+      <app-button label="Crear" (onClick)="createNewWorker()"></app-button>
+    </div>
+  </div>
+</app-dialog-side>

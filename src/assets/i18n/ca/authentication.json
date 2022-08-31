@@ -1,0 +1,14 @@
+{
+    "auth": {
+        "login": {
+            "signIn": "Registrarse",
+            "signUp": "Entrar",
+            "password": "Constraseña",
+            "username": "Usuari",
+            "emailAdress": "Correo electronic",
+            "usernameOrEmailAdress": "Usuari o correo electronic",
+            "rememberMe": "Recordar-me",
+            "forgotPassword": "¿Contraseña perduda?"
+        }
+    }
+}

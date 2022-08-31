@@ -1,0 +1,116 @@
+@import 'src/styles/variables.scss';
+
+button[mat-button] {
+  background-color: $ab-light-blue;
+  border-radius: 0.5rem;
+  color: $ab-naturalWhite;
+  margin: 0.25rem auto;
+  font-size: 0.75rem;
+  padding: 1rem;
+  line-height: 2rem;
+  width: initial;
+  cursor: pointer;
+  outline: none;
+
+  &.primary {
+    padding: 0.25rem 2.5rem;
+    border: 1px solid $ab-light-blue;
+  }
+  //&.loading {
+  //  span {
+  //    visibility: hidden;
+  //  }
+  //  .loader {
+  //    display: block;
+  //  }
+  //}
+  //.loader {
+  //  display: none;
+  //  position: absolute;
+  //  top: 50%;
+  //  left: 0;
+  //  width: 100%;
+  //  height: 100%;
+  //  transform: translateY(-45%);
+  //}
+  //&.disabled {
+  //  background: transparent;
+  //  opacity: 0.5;
+  //}
+  //&.default {
+  //  &.disabled {
+  //    border: 0.0625rem solid red;
+  //    line-height: 1.875rem;
+  //    color: red;
+  //  }
+  //}
+
+  // Button Styles
+  //&.outline {
+  //  border: red;
+  //  color: red;
+  //  background: transparent;
+  //}
+  //&.outline-primary {
+  //  border: 0.0937rem solid red;
+  //  color: red;
+  //  background: transparent;
+  //}
+  //&.none {
+  //  border: none;
+  //  color: red;
+  //  background: transparent;
+  //}
+  //&.secondary {
+  //  border: 1px solid red;
+  //  color: red;
+  //  background: white;
+  //}
+
+  //&.upload {
+  //  background-color: red;
+  //  font-style: italic;
+  //  color: red;
+  //}
+
+  //&.login-primary {
+  //  background: #00a93c;
+  //  font-family: 'Anton', sans-serif;
+  //  font-size: 22px;
+  //  letter-spacing: 0.075rem;
+  //
+  //  &.disabled {
+  //    background: transparent;
+  //    border: 0.0625rem solid #00a93c;
+  //    color: #00a93c;
+  //    opacity: 0.5;
+  //  }
+  //}
+  //&.outline-login-primary {
+  //  background-color: white;
+  //  color: red;
+  //  font-family: 'Anton', sans-serif;
+  //  font-size: 22px;
+  //  letter-spacing: 0.075rem;
+  //  border: 1px solid red;
+  //  text-transform: uppercase;
+  //}
+  //&.approve {
+  //  background-color: red;
+  //}
+  //&.deny {
+  //  background-color: red;
+  //}
+  //&.payment-primary {
+  //  background: red;
+  //  font-size: 16px;
+  //}
+  //.count-down-container {
+  //  position: relative;
+  //
+  //  > span {
+  //    position: absolute;
+  //    right: 0.5rem;
+  //  }
+  //}
+}

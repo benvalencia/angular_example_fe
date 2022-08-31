@@ -1,0 +1,51 @@
+<div class="button-user-container" appClickOut
+     [matMenuTriggerFor]="menu"
+     (clickOut)="showOptions = false"
+>
+  <div class="button-user-container-text">
+    <span>{{this.userProfile.name}} {{this.userProfile.lastname}}</span>
+    <span>@{{this.userProfile.username}}</span>
+  </div>
+  <div class="button-user-container-foto">
+    <img *ngIf="userProfile.profilePhoto" src="{{userProfile.profilePhoto}}" alt="">
+
+    <div *ngIf="!userProfile.profilePhoto" class="button-user-container-foto-icon">
+      <span class="material-icons item-icon">account_circle</span>
+    </div>
+
+  </div>
+</div>
+<!--<mat-menu #menu="matMenu">-->
+<!--  <button mat-menu-item>Item 1</button>-->
+<!--  <button mat-menu-item>Item 2</button>-->
+<!--</mat-menu>-->
+<mat-menu #menu="matMenu" class="user-options-container" xPosition="before">
+  <div class="nav-container-list"
+       *ngFor="let link of optionsLinks"
+       [routerLink]="link.path"
+       routerLinkActive
+       #rla="routerLinkActive"
+  >
+    <div class="nav-container-item"
+         [class.active]="rla.isActive"
+         (click)="link.action === 'logout' ? logout() : false">
+      <span class="material-icons item-icon">{{link.icon}}</span>
+      <span class="item-text"> {{ link.translate ? (link.label | translate) : link.label }} </span>
+    </div>
+  </div>
+</mat-menu>
+<!--<div class="user-options-container" *ngIf="showOptions">-->
+<!--  <div class="nav-container-list"-->
+<!--       *ngFor="let link of optionsLinks"-->
+<!--       [routerLink]="link.path"-->
+<!--       routerLinkActive-->
+<!--       #rla="routerLinkActive"-->
+<!--  >-->
+<!--    <div class="nav-container-item"-->
+<!--         [class.active]="rla.isActive"-->
+<!--         (click)="link.action === 'logout' ? logout() : false">-->
+<!--      <span class="material-icons item-icon">{{link.icon}}</span>-->
+<!--      <span class="item-text"> {{ link.translate ? (link.label | translate) : link.label }} </span>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

@@ -1,0 +1,13 @@
+<div class="container-shadow" (click)="closeBox()"></div>
+<div class="container">
+  <ng-container>
+    <div class="dialog-side-container">
+      <div class="dialog-side-container-title">
+        <div>{{ dialogTitle | translate}}</div>
+        <div (click)="closeBox()">X</div>
+      </div>
+      <ng-content></ng-content>
+    </div>
+  </ng-container>
+</div>
+

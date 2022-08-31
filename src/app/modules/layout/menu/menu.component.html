@@ -1,0 +1,33 @@
+<div class="menu-container">
+  <div>
+    <a class="logo-container" [routerLink]="['/app/dashboard']">
+      <img class="logo" alt="Analyse Base" [src]="images.logo" />
+    </a>
+  </div>
+
+  <div class="nav-container">
+    <div>
+      <div class="nav-container-list"
+        *ngFor="let link of navLinks"
+        [routerLink]="link.path"
+        routerLinkActive
+        #rla="routerLinkActive"
+      >
+        <div class="nav-container-item"
+          [class.active]="rla.isActive"
+          (click)="link.action === 'logout' ? logout() : false">
+          <span class="material-icons item-icon">{{link.icon}}</span>
+          <span class="item-text"> {{ link.translate ? (link.label | translate) : link.label }} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="language-container">
+    <app-language-menu></app-language-menu>
+  </div> -->
+
+<!--  <div class="user-container">-->
+<!--&lt;!&ndash;    <app-user-menu></app-user-menu>&ndash;&gt;-->
+<!--  </div>-->
+</div>

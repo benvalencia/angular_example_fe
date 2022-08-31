@@ -1,0 +1,12 @@
+{
+    "profile": {
+        "accountDetails": "Detalles de la cuenta",
+        "accountDetailsText": "Ajustar detalles de la cuenta",
+        "personalInfo": "Informacio Personal",
+        "personalInfoText": "Afegir informacio personal",
+        "address": "Direcco",
+        "addressText": "Afegir direccio",
+        "socialLinks": "Xarxes Socials",
+        "socialLinksText": "Afegir xarxes socials"
+    }
+}

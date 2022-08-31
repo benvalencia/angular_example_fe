@@ -1,0 +1,14 @@
+<div class="sub-menu-container">
+  <div class="sub-menu-container-left">
+    <div>
+      iconos menus favoritos
+    </div>
+  </div>
+  <div class="sub-menu-container-right">
+    <div *ngIf="false">icono notification</div>
+    <app-button-user
+      [userProfile]="userProfile"
+      (logOutUser)="logout()"
+    ></app-button-user>
+  </div>
+</div>

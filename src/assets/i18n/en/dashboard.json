@@ -1,0 +1,19 @@
+{
+    "menu": {
+        "dashboard": "Dashboard",
+        "calendar": "Calendar",
+        "mail": "Mail",
+        "profile": "Profile",
+        "settings": "Settings",
+        "logout": "Logout",
+        "wallet": "Wallet",
+        "wallet_expenses": "Expenses",
+        "wallet_incomes": "Incomes",
+        "wallet_banking": "Banking",
+        "clients": "Clients",
+        "clients_workers": "Workers",
+        "clients_users": "Users",
+        "company": "Company",
+        "company_admin": "Company Admin"
+    }
+}

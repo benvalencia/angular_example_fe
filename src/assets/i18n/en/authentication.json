@@ -1,0 +1,20 @@
+{
+    "auth": {
+        "login": {
+            "signIn": "Sign In",
+            "signUp": "Sing Up",
+            "password": "Password",
+            "username": "Username",
+            "emailAddress": "Email address",
+            "usernameOrEmailAddress": "Username or email address",
+            "rememberMe": "Remember me",
+            "forgotPassword": "Forgot password?",
+            "enter": "Enter",
+            "or": "Or",
+            "google": "Google",
+            "facebook": "Facebook",
+            "apple": "Apple",
+            "microsoft": "Microsoft"
+        }
+    }
+}

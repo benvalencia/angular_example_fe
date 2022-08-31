@@ -1,0 +1,27 @@
+<button
+  mat-button
+  (click)="clicked($event)"
+  [ngClass]="buttonStyle"
+  [type]="type ? type : 'button'"
+  [class.loading]="isSubmitting"
+>
+<!--  [disabled]="isSubmitting || disabled || (!disabled && _counter > 0)"-->
+<!--  [class.disabled]="disabled || (!disabled && _counter > 0)"-->
+  <div>
+<!--    <ng-content *ngIf="!isSubmitting" select="[appButtonStartIcon]"></ng-content>-->
+    <span>{{ label? (label | translate): ''  }}</span>
+<!--    <div-->
+<!--      class="count-down-container"-->
+<!--      *ngIf="_counter > 0"-->
+<!--    >-->
+<!--      <mat-progress-spinner color="primary" mode="determinate" [value]="progress" [diameter]="20">-->
+<!--      </mat-progress-spinner>-->
+<!--      <span>{{ _counter }}</span>-->
+<!--    </div>-->
+<!--    <ng-content *ngIf="!isSubmitting" select="[appButtonEndIcon]"></ng-content>-->
+<!--    <div class="loader">-->
+<!--      <app-inline-loading-spinner [color]="loadingColor"></app-inline-loading-spinner>-->
+<!--    </div>-->
+<!--    <app-loading-overlay *ngIf="loading"></app-loading-overlay>-->
+  </div>
+</button>

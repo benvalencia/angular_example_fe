@@ -1,0 +1,141 @@
+// Dark Theme Color
+$background-dark: #161d31;
+$box-background-dark: #283046;
+
+// White Theme Color
+$background-white: #f8f8f8;
+$box-background-white: #fff;
+
+//GENERAL SIZE
+$sidenav-collapsed: 80px;
+$sidenav-extended: 260px;
+
+
+// Text Color
+$abs-text: #0f90a2;
+$abs-text-dark: #343c4e;
+$abs-text-dark1: #323c50;
+$abs-text-dark-blue: #5c6f8a;
+
+$abs-highlight: #f2fefc;
+$default-font: Roboto, sans-serif;
+$header-height: 4rem;
+$sub-header-height: 4rem;
+$nav-height: $header-height;
+$abs-background: #f4fbfc;
+
+// Shadow
+$abs-button-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.23);
+$abs-box-shadow-small: 0 0 1rem 0 rgba(0, 180, 205, 0.65);
+$abs-box-shadow-medium: 0 0 1.25rem 0 rgba(0, 180, 205, 0.25); //DEPRECATED
+$abs-box-shadow-large: 0 0 3rem 0 rgba(0, 180, 205, 0.375);
+
+$min-width: 1150px;
+$min-height: 640px;
+$task-card-play: #bbe6ee;
+$ghost-white: #f8f8fa;
+$work-nav-height: 65px;
+
+// Flex
+$flex-zero: 0.0001;
+
+// Colors
+$color-black: #000033;
+$color-highlight: #cdeaff;
+
+// Responsive z-index
+$z1: 9;
+$z2: 99;
+$z3: 999;
+$z4: 9999;
+$z5: 99999;
+$z6: 999999;
+$z7: 9999999;
+$z8: 99999999;
+$z9: 999999999;
+$z10: 9999999999;
+
+// Responsive Font Sizes
+$_10px: 0.625rem;
+$_11px: 0.6875rem;
+$_12px: 0.75rem;
+$_13px: 0.8125rem;
+$_14px: 0.875rem;
+$_15px: 0.9375rem;
+$_16px: 1rem;
+$_18px: 1.125rem;
+$_20px: 1.25rem;
+$_22px: 1.375rem;
+$_23px: 1.4375rem;
+$_24px: 1.5rem;
+
+// Font Weights
+$font-weight-light: 300; //DEPRECATED
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 900;
+
+// Fonts
+$font-family: Roboto;
+$font-medium: $font-weight-medium $_14px $font-family;
+$font-regular: $font-weight-regular $_12px $font-family;
+$font-label: $font-weight-medium $_12px $font-family;
+
+// Shadows
+$box-shadow-small: 0 0 1rem 0 rgba(0, 0, 0, 0.375);
+$box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, 0.125);
+$box-shadow-large: 0 0 3rem 0 rgba(0, 0, 0, 0.375);
+
+$box-shadow-right: 1rem 0.5rem 1rem 0 rgba(0, 0, 0, 0.125);
+
+
+// Global Colors Style
+// --- Gray scale ---//
+$ab-naturalWhite: #fff;
+$wd-white: #f8f9fb;
+$wd-whitesmoke: #ededf1;
+$wd-smoke: #dae0e9;
+$wd-grey-blue: #c2dce1;
+$wd-grey: #9295a9;
+$wd-dark-grey: #9395a9;
+$wd-slate-grey: #5b6f89;
+$wd-silver: #323c4f;
+$wd-black: #000033;
+$wd-naturalBlack: #000;
+$wd-gainsboro: #d6dce5;
+
+//--- AB scale pallet ---//
+$ab-light-blue: #4facfe;
+// --- Rainbow scale ---//
+$ab-light-yellow: #ffca33;
+$ab-yellow: #ffbd01;
+$ab-dark-yellow: #ff9e00;
+$ab-light-green: #00d400; // Optional | INSERT COLOR
+$ab-green: #00d400;
+$ab-dark-green: #00d400; // Optional | INSERT COLOR
+$wd-light-red: #ff0000; // Optional | INSERT COLOR
+$wd-red: #ff0000;
+$wd-dark-red: #e2002d; // Optional | INSERT COLOR
+$wd-light-magenta: #ff356a;
+$wd-magenta: #ff256a; // Optional | INSERT COLOR
+$wd-dark-magenta: #cd0a6a;
+$wd-light-purple: #9654ff;
+$wd-purple: #ff256a; // Optional | INSERT COLOR
+$wd-dark-purple: #6b25d3;
+$wd-light-turquoise: #00c8cc;
+$wd-turquoise: #0069df; // Optional | INSERT COLOR
+$wd-dark-turquoise: #009cae;
+$wd-light-blue: #009aff;
+$wd-blue: #0069df; // Optional | INSERT COLOR
+$wd-dark-blue: #0069df;
+$wd-blue-lavender: #ccebfe;
+
+//Text Style
+$wd-textStyle-light: 300;
+$wd-textStyle-normal: 500;
+$wd-textStyle-bold: 700;
+
+//BORDER
+$border-radious: 0.375rem;
+$border-light: 0.0625rem solid $wd-smoke;

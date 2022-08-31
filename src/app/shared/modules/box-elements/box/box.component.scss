@@ -1,0 +1,8 @@
+@import 'src/styles/variables.scss';
+
+.container {
+  border-radius: .375rem;
+  padding: .8rem 1rem;
+  background-color: $box-background-white;
+  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+}

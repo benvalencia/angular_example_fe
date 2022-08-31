@@ -1,0 +1,192 @@
+<div class="container">
+  <div>
+    <div class="profile-nav-list"
+         *ngFor="let step of profileStep"
+    >
+      <div class="profile-nav-item"
+           [class.active]="step.active"
+           (click)="setStepActive(step)">
+        <div class="profile-nav-item-icon">
+          <span class="material-icons item-icon">{{step.icon}}</span>
+        </div>
+        <div class="profile-nav-item-text">
+          <span class="item-text"> {{ step.translate ? (step.label | translate) : step.label }} </span>
+          <span class="item-subtext"> {{ step.translate ? (step.text | translate) : step.text }} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-box class="profile-box">
+    <div>
+      <div *ngIf="stepIsActive() === 1"
+           class="box-container">
+        <div class="box-container-title">
+          <span class="box-container-title-text">{{ 'profile.accountDetails' | translate}}</span>
+          <span class="box-container-title-subtext">{{ 'profile.accountDetailsText' | translate}}</span>
+        </div>
+        <div class="box-container-form">
+          <div class="box-container-form-left">
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="uuid"
+                label="ID"
+                placeholder="Add an ID"
+                [readonly]="true"
+              ></app-input>
+            </div>
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="userUsername"
+                label="Username"
+                placeholder="Add a username"
+              ></app-input>
+            </div>
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="userPhone"
+                label="Phone number"
+                placeholder="Add a phone number"
+              ></app-input>
+            </div>
+          </div>
+          <div class="box-container-form-right">
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="companyId"
+                label="Company ID"
+                placeholder="Add a company ID"
+              ></app-input>
+            </div>
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="userEmail"
+                label="Email"
+                placeholder="Add your email"
+              ></app-input>
+            </div>
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="userType"
+                label="Type"
+                placeholder="Add your type"
+              ></app-input>
+            </div>
+            <!--            <div class="box-container-form-input">-->
+            <!--              <app-input-->
+            <!--                [(ngModel)]="userPassword"-->
+            <!--                label="password"-->
+            <!--                placeholder="Add a password"-->
+            <!--              ></app-input>-->
+
+            <!--              <app-input-->
+            <!--                [(ngModel)]="userConfirmPassword"-->
+            <!--                label="Confirm Password"-->
+            <!--                placeholder="Confirm the password"-->
+            <!--              ></app-input>-->
+            <!--            </div>-->
+          </div>
+        </div>
+      </div>
+      <div *ngIf="stepIsActive() === 2"
+           class="box-container">
+        <div class="box-container-title">
+          <span class="box-container-title-text">{{ 'profile.personalInfo' | translate}}</span>
+          <span class="box-container-title-subtext">{{ 'profile.personalInfoText' | translate}}</span>
+        </div>
+        <div class="box-container-form">
+          <div class="box-container-form-left">
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="name"
+                label="First name"
+                placeholder="Add your first name"
+              ></app-input>
+            </div>
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="lastName"
+                label="Last name"
+                placeholder="Add your first name"
+              ></app-input>
+            </div>
+          </div>
+          <div class="box-container-form-right">
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="country"
+                label="Country"
+                placeholder="Add your country"
+              ></app-input>
+            </div>
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="language"
+                label="Language"
+                placeholder="Add your language"
+              ></app-input>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="stepIsActive() === 3"
+           class="box-container">
+        <div class="box-container-title">
+          <span class="box-container-title-text">{{ 'profile.address' | translate}}</span>
+          <span class="box-container-title-subtext">{{ 'profile.addressText' | translate}}</span>
+        </div>
+        <div class="box-container-form">
+          <div class="box-container-form-left">
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="address"
+                label="Address"
+                placeholder="Add your address"
+              ></app-input>
+            </div>
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="zipCode"
+                label="Zip code"
+                placeholder="Add your zip code"
+              ></app-input>
+            </div>
+          </div>
+          <div class="box-container-form-right">
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="city"
+                label="City"
+                placeholder="Add your city"
+              ></app-input>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="stepIsActive() === 4"
+           class="box-container">
+        <div class="box-container-title">
+          <span class="box-container-title-text">{{ 'profile.socialLinks' | translate}}</span>
+          <span class="box-container-title-subtext">{{ 'profile.socialLinksText' | translate}}</span>
+        </div>
+        <div class="box-container-form">
+          <div class="box-container-form-left">
+            <div class="box-container-form-input">
+              <app-input
+                [(ngModel)]="twitter"
+                label="Twitter"
+                placeholder="Add your Twitter"
+              ></app-input>
+            </div>
+          </div>
+          <div class="box-container-form-right">
+          </div>
+        </div>
+      </div>
+      <div>
+        <button *ngIf="stepIsActive() !== 1" (click)="previousProfileSection()">previous</button>
+        <button *ngIf="stepIsActive() !== 4" (click)="nextProfileSection()">next</button>
+        <button *ngIf="stepIsActive() === 4" (click)="saveProfileSettings()">done</button>
+      </div>
+    </div>
+  </app-box>
+</div>

@@ -1,0 +1,97 @@
+@import 'src/styles/variables.scss';
+
+.menu-container {
+  background-color: $box-background-white;
+  color: #818896;
+  box-shadow: $box-shadow;
+  user-select: none;
+  height: 100vh;
+  width: $sidenav-collapsed;
+  overflow: hidden;
+  position: fixed;
+  transition: .4s cubic-bezier(.25,.8,.25,1),background 0s;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: $z1;
+
+  &:hover {
+    width: $sidenav-extended;
+  }
+
+  .logo-container {
+    margin-right: 1rem;
+    cursor: pointer;
+
+    img {
+      padding: 1rem 1.5rem;
+      height: 1.75rem;
+    }
+    span {
+      display: flex;
+      overflow: hidden;
+      font-size: 1.1rem;
+    }
+  }
+
+  .nav-container {
+    //flex-grow: 1;
+
+    &-list {
+      margin-top: .5rem;
+    }
+    &-item {
+      margin: 0 15px;
+      padding: 10px 15px;
+      display: flex;
+      overflow: hidden;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      transition: all .5s ease;
+
+      &:hover {
+        padding-left: 25px;
+      }
+      &.active {
+        background-color: $background-white;
+      }
+
+      .item-icon {
+        font-size: 1.5rem;
+        margin-right: 1.1rem;
+        height: 20px;
+        width: 20px;
+      }
+      .item-text {
+        font-size: 1.1rem;
+      }
+    }
+
+    ::ng-deep .mat-tab-link {
+      min-width: 2.25rem;
+      font: $font-medium;
+      font-weight: $font-weight-regular;
+      color: $wd-grey;
+      padding: 2rem 0.5rem;
+      margin: 0 0.75rem;
+      opacity: 1;
+
+      &.mat-tab-label-active {
+        color: $wd-black;
+        font-weight: $font-weight-medium;
+      }
+    }
+    ::ng-deep .mat-tab-nav-bar {
+      border-bottom: none;
+    }
+    ::ng-deep .mat-ink-bar {
+      height: 0.1875rem;
+    }
+  }
+
+  &.dark-theme {
+    background-color: $box-background-dark;
+  }
+}
+
+

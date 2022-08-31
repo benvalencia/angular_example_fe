@@ -1,0 +1,24 @@
+<div appProvideParentForm>
+  <label *ngIf="label">
+    {{ label | translate }}
+  </label>
+  <div class="input-container">
+    <label>
+      <input
+        *ngIf="display"
+        [(ngModel)]="value"
+        name="{{ name }}"
+        type="{{ type }}"
+        step="{{ step }}"
+        disabled="{{ disabled || readonly }}"
+        required="{{ required }}"
+        [class.error]="error"
+        [class.readonly]="readonly"
+        placeholder="{{
+          placeholder ? (placeholder | translate) : ''
+        }}"
+      />
+    </label>
+  </div>
+  <ng-content></ng-content>
+</div>

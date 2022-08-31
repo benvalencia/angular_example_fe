@@ -1,0 +1,10 @@
+{
+    "menu": {
+        "dashboard": "Dashboard",
+        "calendar": "Calendari",
+        "mail": "Correo",
+        "profile": "Perfil",
+        "settings": "Ajustes",
+        "logout": "Sortir"
+    }
+}

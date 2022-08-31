@@ -1,0 +1,16 @@
+
+.sub-menu-container {
+  width:  calc(100vw - 4.4rem - 110px);
+  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+  margin: 1rem 2rem 0 2rem;
+  background-color: #7367f0;
+  border-radius: .375rem;
+  padding: .375rem 1rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-menu-container-right {
+  display: flex;
+}

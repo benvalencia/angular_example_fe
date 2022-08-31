@@ -1,0 +1,12 @@
+{
+    "profile": {
+        "accountDetails": "Account Details",
+        "accountDetailsText": "Setup account details",
+        "personalInfo": "Personal Info",
+        "personalInfoText": "Add personal info",
+        "address": "Address",
+        "addressText": "Add address",
+        "socialLinks": "Social Links",
+        "socialLinksText": "Add social links"
+    }
+}

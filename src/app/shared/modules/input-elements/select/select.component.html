@@ -1,0 +1,92 @@
+<div class="select-dropdown" #dropreference>
+<!--  <app-loading-overlay *ngIf="loading"></app-loading-overlay>-->
+  <button
+    mat-button
+    class="toggle"
+    type="button"
+    [disabled]="isDisabled"
+    [ngClass]="{ 'empty-field': !value }"
+    [class.buttonStyle]="buttonStyle"
+    [class.readonly]="readonly"
+    [class.is-input]="isInput"
+    (click)="toggleDropdown($event)"
+  >
+    {{
+    showSelectedValue
+      ? value
+        ? value[label]
+          ? translate
+            ? (value[label] | translate: value.translationData)
+            : value[label]
+          : value
+        : placeholder
+      : placeholder
+    }}
+<!--    <mat-icon>keyboard_arrow_down</mat-icon>-->
+  </button>
+  <div class="dropdown-container">
+<!--    <app-floating-dropdown-box-->
+<!--      [reference]="dropreference"-->
+<!--      #dropdownComp-->
+<!--      [height]="12.5"-->
+<!--      autoScrollSelector=".selected"-->
+<!--      [expandableWidth]="expandableWidth"-->
+<!--    >-->
+      <div class="floating-dropdown-options-container" fxLayout="column">
+        <button mat-button *ngIf="showBlank" (click)="select(null)" class="blank" type="button">
+          {{ blankLabel ? blankLabel : ('dropdown.none' | translate) }}
+        </button>
+        <button
+          mat-button
+          *ngFor="let option of options"
+          (click)="select(option)"
+          [class.selected]="
+            identifier ? value && value[identifier] === option[identifier] : value === option
+          "
+          type="button"
+        >
+          <!-- <div *ngIf="buttonStyle" [ngSwitch]="option[identifier] + 1">
+            <div *ngSwitchCase="1">
+              <div fxFlex fxLayoutAlign="start center" fxLayoutGap="0.875rem" fxLayout="row">
+                <div class="event-icon" fxLayoutAlign="start center">
+                  <img [src]="images['expense']" />
+                </div>
+              </div>
+            </div>
+            <div *ngSwitchCase="2">
+              <div fxFlex fxLayoutAlign="start center" fxLayoutGap="0.875rem" fxLayout="row">
+                <div class="event-icon" fxLayoutAlign="start center">
+                  <img [src]="images['purchase']" />
+                </div>
+              </div>
+            </div>
+            <div *ngSwitchCase="3">
+              <div fxFlex fxLayoutAlign="start center" fxLayoutGap="0.875rem" fxLayout="row">
+                <div class="event-icon" fxLayoutAlign="start center">
+                  <img [src]="images['travel']" />
+                </div>
+              </div>
+            </div>
+            <div *ngSwitchCase="4">
+              <div fxFlex fxLayoutAlign="start center" fxLayoutGap="0.875rem" fxLayout="row">
+                <div class="event-icon" fxLayoutAlign="start center">
+                  <img [src]="images['leave']" />
+                </div>
+              </div>
+            </div>
+          </div> -->
+          {{
+          option[label]
+            ? translate
+              ? (option[label] | translate: option.translationData)
+              : option[label]
+            : option
+          }}
+        </button>
+        <button *ngIf="showAddOption" mat-button class="new" (click)="add()" type="button">
+<!--          <img [src]="addImage" />{{ addOptionLabel }}-->
+        </button>
+      </div>
+<!--    </app-floating-dropdown-box>-->
+  </div>
+</div>
